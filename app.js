@@ -5,6 +5,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
 
+const PORT = process.env.PORT;
 
     mongoose.connect("mongodb://localhost/rest_blog");
 
@@ -144,7 +145,7 @@ app.delete("/blogs/:id", function(req, res)
   })
 })
 
-app.listen(3000, function(err)
+app.listen(PORT, function(err)
 {
   if (err)
   {
